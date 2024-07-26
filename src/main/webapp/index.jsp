@@ -55,7 +55,7 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to Jenkins class </h1>
+    <h1>Welcome to Jenkins class --git webhook</h1>
     <h2>Menu</h2>
 
     <div id="menu">
