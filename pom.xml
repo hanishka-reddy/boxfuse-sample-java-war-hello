@@ -8,16 +8,15 @@
     <name>hello</name>
     <url>https://github.com/boxfuse/boxfuse-sample-java-war-hello</url>
          
-         
-         <properties>
-		<docker.image.prefix>kammana</docker.image.prefix>
-		<sonar.host.url>http://13.126.45.239:9000/</sonar.host.url>
-		<sonar.login>squ_3bdf7f8412ef8bdf386935e2e93dc74f951338a5</sonar.login>
-		<java.version>11</java.version>
-                <maven.compiler.source>${java.version}</maven.compiler.source>
-                <maven.compiler.target>${java.version}</maven.compiler.target>
+    <properties>
+        <docker.image.prefix>kammana</docker.image.prefix>
+        <sonar.host.url>http://13.126.45.239:9000/</sonar.host.url>
+        <sonar.login>squ_3bdf7f8412ef8bdf386935e2e93dc74f951338a5</sonar.login>
+        <java.version>11</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+    </properties>
 
-	</properties>
     <dependencies>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -26,13 +25,15 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
-		<plugin>
-                  <groupId>org.codehaus.mojo</groupId>
-                  <artifactId>sonar-maven-plugin</artifactId>
-                  <version>3.0.2</version>
-                </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.1.2184</version> <!-- Updated to the latest version -->
+            </plugin>
+
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.2</version>
@@ -41,12 +42,6 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-
-	    <plugin>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-		<artifactId>sonar-maven-plugin</artifactId>
-		<version>3.9.1.2184</version> <!-- Replace with the latest version -->
-	    </plugin>
 
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
